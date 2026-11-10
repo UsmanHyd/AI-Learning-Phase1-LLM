@@ -9,7 +9,8 @@ Method: same prompt, 5 independent calls at `temperature=0.0`, then 5 at `temper
 | 1 | `gemini-3.6-flash` | 429 RESOURCE_EXHAUSTED: free tier allows 5 requests/minute per model. Script sent 7 calls in under a minute. Fix: `time.sleep(13)` between calls. |
 | 2 | `gemini-3.6-flash` | 503 UNAVAILABLE: provider overloaded (not my fault, retryable). |
 | 3 | `gemini-2.5-flash` | 404 NOT_FOUND: model no longer available to new users, even though it appears in the model list. |
-| 4 (final) | `gemini-3.8-flash` | Worked. No thinking tokens reported (`thoughts=None`), calls take ~1-4 s. |
+| 4 | `gemini-3.8-flash` | Did not work for me (the model Google recommended in the 404 message). |
+| 5 (final) | `gemini-3.5-flash-lite` | Worked. No thinking tokens reported (`thoughts=None`), calls take ~1-4 s. All Experiment A and B results below come from this model. |
 
 Lessons:
 - The model list shows what exists, not what my account may use. Only a real call proves it.
